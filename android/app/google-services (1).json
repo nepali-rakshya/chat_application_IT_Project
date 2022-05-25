@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "934206855682",
+    "project_id": "udham-nari-5c21e",
+    "storage_bucket": "udham-nari-5c21e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934206855682:android:2ddc9b5b74125d62e7251b",
+        "android_client_info": {
+          "package_name": "com.udhamNari.flutter_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934206855682-b1khd3c4lj6rsishpg2mtangqsfjata2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.udhamNari.flutter_demo",
+            "certificate_hash": "274aa1ace79f7799b78922a1534346bfe4c231b6"
+          }
+        },
+        {
+          "client_id": "934206855682-1eqn93lh6k81ppepiv3jbi6ngmpcvn4g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQATsxMQEg4uzaOXizzmEBCKhWKw8Irjs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934206855682-1eqn93lh6k81ppepiv3jbi6ngmpcvn4g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
