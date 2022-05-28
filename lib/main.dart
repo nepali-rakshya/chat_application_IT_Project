@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamProvider<MyUser?>.value(
+      catchError: (_, __) => null,
       initialData: null,
       // the stream provider is listening to the Stream and wrapping this material app now they can access all the data provided by the stream
       value: AuthService().user,
