@@ -6,6 +6,8 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  final AuthService _auth =
+      AuthService(); //it is the instance of AuthService class in auth.dart
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,10 +19,8 @@ class _SignInState extends State<SignIn> {
       ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
-        child: ElevatedButton(
-          child: Text('Sign in anon'),
-          onPressed: () async {},
-        ),
+        child:
+            ElevatedButton(child: Text('Sign in anon'), onPressed: () async {}),
       ),
     );
   }
