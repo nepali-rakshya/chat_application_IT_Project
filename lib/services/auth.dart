@@ -22,7 +22,7 @@ class AuthService {
       UserCredential userCredential =
           await FirebaseAuth.instance.signInAnonymously();
       User? user = userCredential.user!;
-      return _userfromFirebase(user!);
+      return _userfromFirebase(user);
     } catch (e) {
       print(e.toString());
       return null;
