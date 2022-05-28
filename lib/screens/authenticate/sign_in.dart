@@ -9,6 +9,11 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
   final AuthService _auth =
       AuthService(); //it is the instance of AuthService class in auth.dart
+
+  //text field state
+  String email = '';
+  String password = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,11 +29,16 @@ class _SignInState extends State<SignIn> {
           child: Column(
             children: <Widget>[
               SizedBox(height: 20.0), //these are form field
-              TextFormField(onChanged: (val) {}),
+              TextFormField(onChanged: (val) {
+                setState(() => email =
+                    val); // whatever value we type in email section is updated into the email string
+              }),
               SizedBox(height: 20.0),
               TextFormField(
                   obscureText: true, //for hiding the pwd
-                  onChanged: (val) {}),
+                  onChanged: (val) {
+                    setState(() => password = val);
+                  }),
               SizedBox(height: 20.0),
               ElevatedButton(
                 child: Text('Sign in'),
@@ -37,7 +47,10 @@ class _SignInState extends State<SignIn> {
                         MaterialStateProperty.all(Colors.pink[400]),
                     textStyle: MaterialStateProperty.all(
                         TextStyle(color: Colors.white))),
-                onPressed: () async {},
+                onPressed: () async {
+                  print(email);
+                  print(password);
+                },
               )
             ],
           ),
