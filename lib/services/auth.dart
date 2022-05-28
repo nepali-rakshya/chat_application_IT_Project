@@ -26,7 +26,7 @@ class AuthService {
   Stream<MyUser?> get user {
     return _auth
         .authStateChanges()
-        .map((User? user) => _userFromFirebaseUser(user));
+        .map((User? user) => _userFromFirebaseUser(user!));
   }
 
   // signInAnon is a method

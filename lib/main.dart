@@ -1,6 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/models/myuser.dart';
 import 'package:flutter_demo/screens/wrapper.dart';
+import 'package:flutter_demo/services/auth.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,8 +22,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Wrapper(), // wrapper is going to be the home screen
+    return StreamProvider<MyUser?>.value(
+      initialData: null,
+      // the stream provider is listening to the Stream and wrapping this material app now they can access all the data provided by the stream
+      value: AuthService().user,
+      //we are accessing user from auth.dart to value creating instance
+      child: MaterialApp(
+        home: Wrapper(), // wrapper is going to be the home screen
+      ),
     );
   }
 }
