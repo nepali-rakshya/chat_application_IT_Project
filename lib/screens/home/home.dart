@@ -6,10 +6,10 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.brown[50],
+      backgroundColor: Colors.blue[50],
       appBar: AppBar(
         title: Text('Udham Nari'),
-        backgroundColor: Colors.brown[400],
+        backgroundColor: Colors.blue[400],
         elevation: 0.0,
         actions: <Widget>[
           TextButton.icon(
