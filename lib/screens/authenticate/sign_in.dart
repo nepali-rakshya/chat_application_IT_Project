@@ -16,12 +16,12 @@ class _SignInState extends State<SignIn> {
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
-        title: Text('Sign in to Udham Nari'),
+        title: const Text('Sign in to Udham Nari'),
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+        padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
         child: ElevatedButton(
-            child: Text('Sign in anon'),
+            child: const Text('Sign in anon'),
             onPressed: () async {
               // the variable is dynamic cuz it can be null or firebase user
               dynamic result = await _auth
