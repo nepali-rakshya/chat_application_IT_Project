@@ -45,6 +45,19 @@ class AuthService {
 
   // sign in with email and pwd
 
+  Future signInWithEmailAndPassword(String email, String password) async {
+    try {
+      UserCredential result = await _auth.signInWithEmailAndPassword(
+          email: email, password: password);
+      User? user = result.user;
+      return _userFromFirebaseUser(user);
+      // if we can register then its going to get stored in MyUser model we had created else its going to return null
+    } catch (e) {
+      print(e.toString());
+      return null; //if the value isn't similar to the registered value then we get null value and in signin.dart if result==null hence they get the comment could not sign in.....
+    }
+  }
+
   // register with email and pwd
 
   Future registerWithEmailAndPassword(String email, String password) async {

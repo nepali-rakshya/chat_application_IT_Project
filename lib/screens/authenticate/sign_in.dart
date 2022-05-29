@@ -68,12 +68,14 @@ class _SignInState extends State<SignIn> {
                           TextStyle(color: Colors.white))),
                   onPressed: () async {
                     if (_formKey.currentState!.validate()) {
-                      print('valid');
+                      dynamic result = await _auth.signInWithEmailAndPassword(
+                          email, password);
                       // when this runs the validate check then it goes to each text field and checks their validity
 
-                      // if (result == null) {
-                      //   setState(() => error = 'please supply a valid email');
-                      // }
+                      if (result == null) {
+                        setState(() =>
+                            error = 'could not sign in with those credentials');
+                      }
                     }
                   }),
               SizedBox(
