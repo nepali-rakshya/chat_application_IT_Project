@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/services/auth.dart';
 
 class Register extends StatefulWidget {
+  final toggleView;
+  Register({this.toggleView});
+
   @override
   _RegisterState createState() => _RegisterState();
 }
 
 class _RegisterState extends State<Register> {
   final AuthService _auth = AuthService();
+  final _formKey = GlobalKey<FormState>(); // form key which is global key
 
   //text field state
   String email = '';
@@ -25,7 +29,9 @@ class _RegisterState extends State<Register> {
             TextButton.icon(
               icon: Icon(Icons.person),
               label: Text('Sign in'),
-              onPressed: () {},
+              onPressed: () {
+                widget.toggleView();
+              },
             )
           ]),
       body: Container(
