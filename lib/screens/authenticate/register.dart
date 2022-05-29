@@ -16,12 +16,18 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100],
+      backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        backgroundColor: Colors.blue[400],
-        elevation: 0.0,
-        title: const Text('Sign up to Udham Nari'),
-      ),
+          backgroundColor: Colors.grey[400],
+          elevation: 0.0,
+          title: const Text('Sign up to Udham Nari'),
+          actions: <Widget>[
+            TextButton.icon(
+              icon: Icon(Icons.person),
+              label: Text('Sign in'),
+              onPressed: () {},
+            )
+          ]),
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
         child: Form(
@@ -43,7 +49,7 @@ class _RegisterState extends State<Register> {
                 child: Text('Register'),
                 style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all(Colors.pink[400]),
+                        MaterialStateProperty.all(Colors.brown[400]),
                     textStyle: MaterialStateProperty.all(
                         TextStyle(color: Colors.white))),
                 onPressed: () async {

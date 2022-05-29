@@ -8,10 +8,15 @@ class Authenticate extends StatefulWidget {
 }
 
 class _AuthenticateState extends State<Authenticate> {
+  bool showSignIn =
+      true; // if showSignIn is true then show sign in else register
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Register(),
-    );
+    if (showSignIn) {
+      return SignIn();
+    } else {
+      return Register();
+    }
   }
 }
