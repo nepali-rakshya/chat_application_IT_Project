@@ -47,6 +47,19 @@ class AuthService {
 
   // register with email and pwd
 
+  Future registerWithEmailAndPassword(String email, String password) async {
+    try {
+      UserCredential result = await _auth.createUserWithEmailAndPassword(
+          email: email, password: password);
+      User? user = result.user;
+      return _userFromFirebaseUser(user);
+      // if we can register then its going to get stored in MyUser model we had created else its going to return null
+    } catch (e) {
+      print(e.toString());
+      return null;
+    }
+  }
+
   // sign out
 
   Future signOut() async {
