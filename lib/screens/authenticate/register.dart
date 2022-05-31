@@ -26,9 +26,9 @@ class _RegisterState extends State<Register> {
     return loading
         ? Loading()
         : Scaffold(
-            backgroundColor: Colors.grey[100],
+            backgroundColor: Colors.brown[100],
             appBar: AppBar(
-                backgroundColor: Colors.grey[400],
+                backgroundColor: Colors.brown[400],
                 elevation: 0.0,
                 title: const Text('Sign up to Udham Nari'),
                 actions: <Widget>[

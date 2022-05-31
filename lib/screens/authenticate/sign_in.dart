@@ -27,9 +27,9 @@ class _SignInState extends State<SignIn> {
     return loading
         ? Loading() // only when loading is true the loading widget is shown else scaffold is shown
         : Scaffold(
-            backgroundColor: Colors.grey[100],
+            backgroundColor: Colors.brown[100],
             appBar: AppBar(
-              backgroundColor: Colors.grey[400],
+              backgroundColor: Colors.brown[400],
               elevation: 0.0,
               title: const Text('Sign in to Udham Nari'),
               actions: <Widget>[
